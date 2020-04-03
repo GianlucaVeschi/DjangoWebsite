@@ -10,6 +10,25 @@
 
 	{% include 'personal/snippets/body_snippet.html' %}
 
+	<!-- 
+	Django way to reference variables inside views.py 
+	<p>{{some_string}}</p>
+	<p>{{some_number}}</p>
+	-->
+
+	<!-- 
+	Django way to loop through a list inside views.py 
+	{% for list_item in list_of_values %}
+		<p>{{list_item}}</p>
+	{% endfor %}
+	-->
+
+	<!-- Django way to loop through a list inside views.py --> 
+	{% for list_item in questions %}
+		{% include 'personal/snippets/body_snippet.html' with value=list_item %}
+	{% endfor %}
+
+	
 </div>
 
 {% endblock content %}
